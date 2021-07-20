@@ -43,7 +43,7 @@ public class DeathListener implements Listener, Runnable {
         long now = System.currentTimeMillis();
 
         deathSnapshots.removeIf(deathSnapshot -> {
-            if (deathSnapshot.getTimestamp() + TimeUnit.MINUTES.toMillis(15) < now) {
+            if (deathSnapshot.getTimestamp() + TimeUnit.MINUTES.toMillis(30) < now) {
                 deathSnapshot.getMarker().deleteMarker();
                 return true;
             }
